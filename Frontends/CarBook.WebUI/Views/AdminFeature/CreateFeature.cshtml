@@ -1,0 +1,40 @@
+﻿@model CreateFeatureDto
+
+@{
+    ViewData["Title"] = "CreateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Özellik Ekleme</h4>
+                        <p class="card-subtitle mb-4">
+                            <b>
+                                Buradan Araç Özelliği Ekleme (Klima, Bluetooth, Ses Sistemi... ) Yapabilirsiniz. Lütfen Verileri Eksiksiz Doldurunuz.
+                                Ardından Kaydet Butonuna Basarak İşlemi Sonlandırabilirsiniz.
+                                Temada Veri Tutarlılığını Sağlayabilmek İçin Lütfen 3'ün Katı Şeklinde Özellik Girişi Yapınız.
+                            </b>
+                        </p>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputModel">Özellik Adı</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="Name" placeholder="Araç Özelliği Adı Giriniz.">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Özelliği Kaydet</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿@model CreateCarDto
+@{
+    ViewData["Title"] = "CreateCar";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Araç Ekleme</h4>
+                        <p class="card-subtitle mb-4">
+                            <b>
+                                Buradan Araç Ekleme yapabilirsiniz. Lütfen verileri eksiksiz doldurunuz.
+                                Ardından Kaydet butonuna basarak işlemi sonlandırabilirsiniz.
+                            </b>
+                        </p>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputBrand">Marka</label>
+                                @Html.DropDownListFor(x => x.BrandId, (List<SelectListItem>)ViewBag.brandValues, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputModel">Model</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="Model" placeholder="Model Bilgisi Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCoverImageUrl">Kapak Fotoğrafı</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="CoverImageUrl" placeholder="Kapak Fotoğrafı Linki Giriniz.">
+                            </div>                                    <div class="form-group">
+                                <label for="exampleInputKm">Km</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="Km" placeholder="Km Bilgisi Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputTransmission">Vites Tipi</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="Transmission" placeholder="Vites Tipi Bilgisi Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputSeat">Koltuk Sayısı</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="Seat" placeholder="Koltuk Sayısı Bilgisi Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLuggage">Bagaj Boyutu </label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="Luggage" placeholder="Bagaj Boyutu Giriniz.(Litre)">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputFuel">Yakıt Tipi</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="Fuel" placeholder="Yakıt Tipi Bilgisi Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputBigImageUrl">Büyük Kapak Fotoğrafı</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="BigImageUrl" placeholder="Araç Detayında Gözükecek Büyük Kapak Fotoğrafını Giriniz.(Litre)">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Aracı Kaydet</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>

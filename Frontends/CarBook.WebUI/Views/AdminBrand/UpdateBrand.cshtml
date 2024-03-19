@@ -1,0 +1,35 @@
+﻿@model UpdateBrandDto
+@{
+    ViewData["Title"] = "UpdateBrand";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Marka Güncelleme</h4>
+                        <p class="card-subtitle mb-4">
+                            <b>
+                                Buradan Mevcut Markayı Güncelleyebilirsiniz. Lütfen verileri eksiksiz doldurunuz.
+                                Ardından Kaydet butonuna basarak işlemi sonlandırabilirsiniz.
+                            </b>
+                        </p>
+                        <form method="post">
+                            <input type="hidden" asp-for="BrandId" />
+                            <div class="form-group">
+                                <label for="exampleInputBigImageUrl">Marka</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="Name" placeholder="Araç Detayında Gözükecek Büyük Kapak Fotoğrafını Giriniz.(Litre)">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Markayı Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>

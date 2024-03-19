@@ -14,6 +14,8 @@ namespace CarBook.Persistence.Context
         {
             optionsBuilder.UseSqlServer("SERVER=DESKTOP-A060F9L;initial Catalog=CarBookDb;integrated Security=True;TrustServerCertificate=True;");
         }
+        public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<AppRole> AppRoles { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Brand> Brands { get; set; }
@@ -33,5 +35,6 @@ namespace CarBook.Persistence.Context
         public DbSet<Author> Authors { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<TagCloud> TagClouds { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿@using CarBook.Dto.AboutDtos
 @model List<ResultAboutDto>
+@if (User.IsInRole("Member")){
 @foreach(var item in Model)
 {
 	<section class="ftco-section ftco-about">
@@ -12,10 +13,10 @@
 						<span class="subheading">Hakkımızda</span>
 						<h2 class="mb-4">@item.Title</h2>
 						<p>@item.Description</p>
-						<p><a asp-controller="RentACar" class="btn btn-primary py-3 px-4">Hemen Araç Kirala</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+}
 }

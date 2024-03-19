@@ -1,0 +1,52 @@
+﻿@model List<ResultBrandDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Markalar</h4>
+                        <p class="card-subtitle mb-4">
+                            <b>Buradan Marka Ekleme, Düzenleme, Silme ve Listeleme Yapılabilmektedir</b>
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Marka</th>
+                                        <th>Güncelle</th>
+                                        <th>Sil</th>
+                                        <th>Markaya Ait Araçlar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.Name</td>
+                                            <td><a href="/Admin/Brand/UpdateBrand/@item.BrandId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
+                                            <td><a href="/Admin/Brand/RemoveBrand/@item.BrandId" class="btn btn-outline-danger"><b>Sil</b></a></td>
+                                            <td><a href="/Admin/Brand/UpdateBrand/@item.BrandId" class="btn btn-outline-danger"><b>Markaya Ait Araçlar</b></a></td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                            <a href="/Admin/Brand/CreateBrand/" class="btn btn-outline-primary">Yeni Marka Girişi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
