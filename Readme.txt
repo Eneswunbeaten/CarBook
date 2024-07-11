@@ -1,1 +1,0 @@
-Güncelleme iþleminin yapýlmasý
